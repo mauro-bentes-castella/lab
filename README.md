@@ -33,7 +33,7 @@ lib/supabase/
   client.ts              cliente de browser
   server.ts              cliente de Server Component
   middleware.ts          renovação de sessão e guarda de rotas
-middleware.ts            liga o guarda a todas as rotas
+proxy.ts                 liga o guarda a todas as rotas (Next 16 substituiu middleware.ts)
 ```
 
 Rotas públicas são declaradas em `PUBLIC_ROUTES` dentro de `lib/supabase/middleware.ts`.
