@@ -1,7 +1,9 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-const PUBLIC_ROUTES = ["/", "/login", "/auth"];
+// "/monitoring" e o tunnelRoute do Sentry: se o guarda barrar essa rota,
+// os erros de navegador nunca chegam ao painel.
+const PUBLIC_ROUTES = ["/", "/login", "/auth", "/monitoring"];
 
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({ request });
